@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "459030189606",
+    "project_id": "react-nativeapp-abe59",
+    "storage_bucket": "react-nativeapp-abe59.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:459030189606:android:1f21e116ad0a5952f0b8e7",
+        "android_client_info": {
+          "package_name": "com.demo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "459030189606-ocnnmkooc14lseno52hgene93vht6v36.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCl-N0xCkWsXH_Cp5mjDKDFE4Rq7dZ_jbo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "459030189606-ocnnmkooc14lseno52hgene93vht6v36.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "459030189606-dbt2d2v2ff005mqgl36fjjqr3nsauoo3.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.yourroofco"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:459030189606:android:79f5de02b6946d16f0b8e7",
+        "android_client_info": {
+          "package_name": "com.yourroofco"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "459030189606-ocnnmkooc14lseno52hgene93vht6v36.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCl-N0xCkWsXH_Cp5mjDKDFE4Rq7dZ_jbo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "459030189606-ocnnmkooc14lseno52hgene93vht6v36.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "459030189606-dbt2d2v2ff005mqgl36fjjqr3nsauoo3.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.yourroofco"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
