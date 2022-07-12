@@ -14,13 +14,13 @@ import Navigationbar from './Navigationbar';
 import myStyles from '../css/myStyles';
 import COLORS from '../css/colors';
 import {getStoredData} from '../constant/globalStorage';
-import ContantMessage from '../constant/ContantMessage';
+import ContantMessage from '../constant/Messages';
 
 function HomeScreen() {
   // console.log('first', globalStorage.getStoredData('nilesh'));
   useEffect(() => {
     testCall();
-    console.log('Initial commit value');
+    console.log('Initial commit value', '============');
   }, []);
 
   const onPressListItem = item => {
