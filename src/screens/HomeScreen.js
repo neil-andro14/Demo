@@ -19,7 +19,7 @@ function HomeScreen() {
   // console.log('first', globalStorage.getStoredData('nilesh'));
   useEffect(() => {
     testCall();
-    console.log('first');
+    console.log('Initial commit value');
   }, []);
 
   const onPressListItem = item => {
