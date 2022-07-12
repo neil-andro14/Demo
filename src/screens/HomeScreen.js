@@ -1,4 +1,4 @@
-import React, {Component, useEffect, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import globalStorage from '../constant/globalStorage';
 import {
   View,
@@ -15,20 +15,13 @@ import myStyles from '../css/myStyles';
 import COLORS from '../css/colors';
 import {getStoredData} from '../constant/globalStorage';
 
-
 function HomeScreen() {
   // console.log('first', globalStorage.getStoredData('nilesh'));
   useEffect(() => {
     testCall();
-  });
+    console.log('first');
+  }, []);
 
-  componentDidMount(){
-
-  }
-
-  componentDidUpdate(){
-    
-  }
   const onPressListItem = item => {
     console.log(item);
     setSelectedItem(item);
