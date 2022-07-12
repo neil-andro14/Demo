@@ -14,6 +14,7 @@ import Navigationbar from './Navigationbar';
 import myStyles from '../css/myStyles';
 import COLORS from '../css/colors';
 import {getStoredData} from '../constant/globalStorage';
+import ContantMessage from '../constant/ContantMessage';
 
 function HomeScreen() {
   // console.log('first', globalStorage.getStoredData('nilesh'));
@@ -73,10 +74,7 @@ function HomeScreen() {
       ],
       {
         cancelable: true,
-        onDismiss: () =>
-          Alert.alert(
-            'This alert was dismissed by tapping outside of the alert dialog.',
-          ),
+        onDismiss: () => Alert.alert(ContantMessage.CONSTANT_MESSAGE),
       },
     );
 
