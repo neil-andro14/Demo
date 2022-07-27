@@ -21,7 +21,6 @@ const globalStorage = {
   async getStoredData(key) {
     try {
       const value = await AsyncStorage.getItem(key);
-      console.log('Stored Key: ', value);
       return value;
       if (value !== null) {
         // value previously stored

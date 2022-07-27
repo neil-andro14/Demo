@@ -12,7 +12,7 @@ export default StyleSheet.create({
   editValue: {
     borderBottomWidth: 1,
     borderBottomColor: COLORS.BLACK,
-    height: 40,
+    height: 45,
     width: '85%',
     marginEnd: 20,
     marginStart: 20,

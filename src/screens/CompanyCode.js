@@ -28,6 +28,11 @@ function CompanyCode({navigation}) {
   function onTextChangeListener() {
     setClickble(false);
   }
+  function textChangesListener(changeText) {
+    console.log('CompanyCode: ', changeText);
+    setClickble(false);
+  }
+
   const _renderCancelButton = () => {
     return (
       <>
@@ -66,7 +71,8 @@ function CompanyCode({navigation}) {
           placeholder="Company Code"
           style={styles.editValue}
           keyboardType="numeric"
-          onChangeText={() => onTextChangeListener()}
+          onChangeText={textChangesListener}
+          //  onChangeText={() => onTextChangeListener()}
           maxLength={6}
         />
 

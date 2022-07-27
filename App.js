@@ -22,7 +22,8 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {NavigationContainer, StackActions} from '@react-navigation/native';
 import CompanyCodeScreen from './src/screens/CompanyCode';
 import HomeScreen from './src/screens/HomeScreen';
-
+import ContentDetails from './src/screens/ContentDetails';
+import LoginScreen from './src/screens/Login/LoginScreen';
 const StackNavi = createNativeStackNavigator();
 
 export default function App() {
@@ -31,11 +32,13 @@ export default function App() {
       <StackNavi.Navigator screenOptions={{headerShown: false}}>
         <StackNavi.Screen
           name="CompanyCode"
-          component={CompanyCodeScreen}
-          options={{title: 'Company Code Screena'}}
+          component={LoginScreen}
+          options={{title: 'Company Code Screen'}}
         />
 
         <StackNavi.Screen name="HomeScreen" component={HomeScreen} />
+        <StackNavi.Screen name="ContentDetails" component={ContentDetails} />
+        <StackNavi.Screen name="LoginScreen" component={LoginScreen} />
       </StackNavi.Navigator>
     </NavigationContainer>
   );

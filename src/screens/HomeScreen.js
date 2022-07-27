@@ -15,23 +15,33 @@ import myStyles from '../css/myStyles';
 import COLORS from '../css/colors';
 import {getStoredData} from '../constant/globalStorage';
 import ContantMessage from '../constant/Messages';
+import WebURL from '../API/WebURL';
+import APICallServices from '../API/APICallServices';
 
-function HomeScreen() {
+function HomeScreen({navigation}) {
   // console.log('first', globalStorage.getStoredData('nilesh'));
+  const [jsonData, setjsonData] = useState('');
+
   useEffect(() => {
-    testCall();
-    console.log('Initial commit value', '============');
+    callAPI();
   }, []);
 
+  function callAPI() {
+    fetch(WebURL.allPostURL, {
+      method: 'GET',
+    })
+      .then(response => response.json())
+      .then(json => {
+        setjsonData(json);
+      });
+  }
   const onPressListItem = item => {
-    console.log(item);
-    setSelectedItem(item);
-    showAlert(item);
+    console.log(item.title);
+    setSelectedItem(item.title);
+    showAlert(item.title);
     //ToastAndroid.show(item, ToastAndroid.SHORT);
   };
-  const testCall = async () => {
-    console.log('Other', await globalStorage.getStoredData('nilesh'));
-  };
+
   const Item = ({item, onPress, backgroundColor, textColor}) => (
     <TouchableOpacity
       onPress={onPress}
@@ -43,13 +53,12 @@ function HomeScreen() {
   );
   const [selectedItem, setSelectedItem] = useState(null);
   const renderListItem = ({item}) => {
-    const backgroundColor = item.key === selectedItem ? '#000000' : '#ff00ff';
-    const color = item.key === selectedItem ? '#ff0000' : '#0f0fff';
-
+    const backgroundColor = item.title === selectedItem ? '#000000' : '#ff00ff';
+    const color = item.title === selectedItem ? '#ff0000' : '#0f0fff';
     return (
       <Item
-        item={item.key}
-        onPress={() => onPressListItem(item.key)}
+        item={item.title}
+        onPress={() => onPressListItem(item)}
         backgroundColor={{backgroundColor}}
         textColor={{color}}
       />
@@ -68,7 +77,8 @@ function HomeScreen() {
         },
         {
           text: 'OK',
-          onPress: () => Alert.alert('OK Pressed'),
+          onPress: () =>
+            navigation.navigate('ContentDetails', {screentitle: item}),
           style: 'default',
         },
       ],
@@ -84,16 +94,9 @@ function HomeScreen() {
       <Navigationbar name="Home Screen" />
       <View style={[{width: '100%'}]}>
         <FlatList
-          data={[
-            {key: 'Devin'},
-            {key: 'Dan'},
-            {key: 'Dominic'},
-            {key: 'Jackson'},
-            {key: 'James'},
-            {key: 'Joel'},
-          ]}
+          data={jsonData}
           renderItem={renderListItem}
-          keyExtractor={item => item.key}
+          keyExtractor={item => item.title}
           extraData={selectedItem}
         />
       </View>
