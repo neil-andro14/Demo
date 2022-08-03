@@ -6,6 +6,7 @@ import LoginScreen from '../screens/Login/LoginScreen';
 import CustomDrawerHeader from './CustomDrawerHeader';
 import SettingScreen from '../screens/Setting/SettingScreen';
 import PaginationScreen from '../screens/Pagination/PaginationScreen';
+import CalendarsView from '../screens/Calender/CalendarsView';
 const Drawer = createDrawerNavigator();
 const DrawerNavigation = () => {
   return (
@@ -31,6 +32,7 @@ const DrawerNavigation = () => {
       <Drawer.Screen
         name="Pagination"
         component={PaginationScreen}></Drawer.Screen>
+      <Drawer.Screen name="Calendar" component={CalendarsView}></Drawer.Screen>
     </Drawer.Navigator>
   );
 };
